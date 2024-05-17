@@ -13,15 +13,13 @@ public class WriteFile {
 
     public WriteFile(File file) throws IOException {
         this.file = file;
-        this.fileWriter = new FileWriter(file); 
+        this.fileWriter = new FileWriter(file, true); 
         this.pw = new PrintWriter(fileWriter);
     }
     
-    public void writeData(){
-        pw.println("Queso");
-        
+    public void writeData(File file) throws IOException{
+        pw.println("1582;José;Coronel" );
+        fileWriter.close();
     }
-    
-    
     
 }

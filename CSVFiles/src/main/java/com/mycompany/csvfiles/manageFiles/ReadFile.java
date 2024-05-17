@@ -20,10 +20,7 @@ public class ReadFile {
         this.fileReader = new FileReader(file);        
         this.bufferedReader = new BufferedReader(fileReader);
 
-    }
-    
-    
-    
+    } 
     
     public List<String> loadData(){
         String line= null;
