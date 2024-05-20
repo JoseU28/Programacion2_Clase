@@ -17,8 +17,8 @@ public class WriteFile {
         this.pw = new PrintWriter(fileWriter);
     }
     
-    public void writeData(File file) throws IOException{
-        pw.println("1582;José;Coronel" );
+    public void writeData(File file,String code,String name,String lastname) throws IOException{
+        pw.println(code+";"+name+";"+lastname );
         fileWriter.close();
     }
     

@@ -9,16 +9,29 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
+import java.util.Scanner;
 
 public class CSVFiles {
 
     public static void main(String[] args) throws FileNotFoundException, IOException {
+        String code=null;
+        String name=null;
+        String lastname=null;
+        Scanner cap=new Scanner(System.in);
+        System.out.println("Escribe tu código");
+        code=cap.nextLine();
+        System.out.println("Escribe tu nombre");
+        name=cap.nextLine();
+        System.out.println("Escribe tu apellido");
+        lastname=cap.nextLine();
+
+        
         File file = new File("./data.csv");
         file.createNewFile();
         ReadFile readFile = new ReadFile(file);
 
         WriteFile writefile = new WriteFile(file);
-        writefile.writeData(file);
+        writefile.writeData(file,code,name,lastname);
         
         List<String> data = readFile.loadData();
         for(String line: data){
