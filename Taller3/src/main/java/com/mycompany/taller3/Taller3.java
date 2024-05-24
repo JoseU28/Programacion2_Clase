@@ -21,9 +21,10 @@ public class Taller3 {
 
         for(String line: data){
             frase2 = line.replace('o', '0').replace('e', '3');
-            writeFiles.writeData(file2, frase2);
             System.out.println(frase2);
         }
+        writeFiles.writeData(file2, frase2);
+
     }
         
 }
